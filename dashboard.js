@@ -568,6 +568,35 @@
 
   var allClasses = CLASSES.map(function (c) { return { v: c, t: c }; });
 
+  /* ── Mobile drawer ────────────────────────────────────── */
+  var scrimTimer = null;
+
+  function setDrawer(open) {
+    var sb = document.getElementById('sidebar');
+    var scrim = document.getElementById('nav-scrim');
+    var btn = document.getElementById('nav-toggle');
+    if (!sb || !scrim || !btn) return;
+
+    sb.classList.toggle('is-open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    // Stop the page behind the drawer from scrolling under it.
+    document.body.style.overflow = open ? 'hidden' : '';
+
+    if (scrimTimer) { clearTimeout(scrimTimer); scrimTimer = null; }
+    if (open) {
+      scrim.hidden = false;
+      requestAnimationFrame(function () { scrim.classList.add('is-on'); });
+    } else {
+      scrim.classList.remove('is-on');
+      scrimTimer = setTimeout(function () { scrim.hidden = true; }, 220);
+    }
+  }
+
+  function drawerIsOpen() {
+    var sb = document.getElementById('sidebar');
+    return !!sb && sb.classList.contains('is-open');
+  }
+
   /* ── Router ───────────────────────────────────────────── */
   var VIEWS = ['dashboard', 'students', 'fees', 'attendance', 'results', 'timetable', 'settings'];
   var TITLES = {
@@ -590,6 +619,7 @@
     });
 
     document.title = TITLES[name] + ' — Lincoln Academy | Alimo EduCloud';
+    setDrawer(false);   // tapping a module closes the drawer behind it
     window.scrollTo(0, 0);
   }
 
@@ -628,12 +658,28 @@
     renderResults();
     renderTimetable();
 
+    document.getElementById('nav-toggle').addEventListener('click', function () {
+      setDrawer(!drawerIsOpen());
+    });
+    document.getElementById('nav-scrim').addEventListener('click', function () {
+      setDrawer(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drawerIsOpen()) {
+        setDrawer(false);
+        document.getElementById('nav-toggle').focus();
+      }
+    });
+
     window.addEventListener('hashchange', route);
     route();
 
     window.addEventListener('resize', function () {
       var tip = document.getElementById('chart-tip');
       if (tip) tip.classList.remove('is-on');
+      // Past the breakpoint the sidebar is permanent again, so a
+      // drawer left open would strand the scrim over the page.
+      if (window.innerWidth > 860) setDrawer(false);
     });
   }
 
