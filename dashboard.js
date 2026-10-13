@@ -631,6 +631,9 @@
     fillSelect('res-class', CLASSES.map(function (c) { return { v: c, t: c, sel: c === 'JSS2A' }; }));
     fillSelect('tt-class', CLASSES.map(function (c) { return { v: c, t: c, sel: c === 'JSS2A' }; }));
 
+    // main.js is not loaded here, so the footer year is set locally.
+    document.getElementById('dash-year').textContent = new Date().getFullYear();
+
     var today = new Date();
     var iso = today.getFullYear() + '-' +
       String(today.getMonth() + 1).padStart(2, '0') + '-' +
