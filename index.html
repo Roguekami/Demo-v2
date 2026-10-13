@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alimo EduCloud: Smart School Management Platform</title>
+  <meta name="description" content="Alimo EduCloud gives Nigerian schools a complete, cloud-based management platform: fees, attendance, results, timetables, and parent communication, all in one branded portal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="site-header" role="banner">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="wordmark" aria-label="Alimo EduCloud home">
+        Alimo <span class="wordmark-accent">EduCloud</span>
+      </a>
+      <button class="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#editions">Editions</a></li>
+        <li><a href="#demo" class="nav-cta">Request a Demo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-text">
+          <p class="eyebrow">Smart School Management</p>
+          <h1 id="hero-heading">Your school, fully managed in the cloud</h1>
+          <p class="hero-body">
+            Alimo EduCloud gives every school its own branded portal, covering fees, attendance, results, timetables, and parent communication from a single admin dashboard.
+          </p>
+          <div class="hero-actions">
+            <a href="#demo" class="btn btn-primary">Request a Demo</a>
+            <a href="#how-it-works" class="btn btn-ghost">See how it works</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="browser-frame">
+            <div class="browser-bar">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-address">schoolname.alimo.cloud</span>
+            </div>
+            <img
+              src="dashboard_mockup_1791887267934.jpg"
+              alt="Alimo EduCloud admin dashboard showing enrollment summary, fee collection rate, and attendance overview"
+              class="dashboard-img"
+              width="960"
+              height="540"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features" aria-labelledby="features-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="features-heading">Every part of school operations, covered</h2>
+          <p class="section-intro">Six core modules work together so your staff stop chasing paper and start having answers.</p>
+        </header>
+
+        <div class="feature-list">
+
+          <article class="feature-row">
+            <div class="feature-content">
+              <h3>Fee Management</h3>
+              <p>Generate invoices, track outstanding balances per student, and accept payment through Paystack or Flutterwave. Payment history is available to parents the moment a transaction clears.</p>
+            </div>
+            <div class="feature-stat" aria-hidden="true">
+              <div class="stat-card">
+                <div class="stat-label">Collection rate this term</div>
+                <div class="stat-value">78<span class="stat-unit">%</span></div>
+                <div class="stat-bar-track"><div class="stat-bar-fill" style="width:78%"></div></div>
+                <div class="stat-sub">Outstanding: 22% across 272 students</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-row feature-row--reverse">
+            <div class="feature-content">
+              <h3>Attendance Tracking</h3>
+              <p>Mark daily or period-based attendance in seconds. Absentee alerts go to parents automatically. Trend reports show you which classes need follow-up before the term ends.</p>
+            </div>
+            <div class="feature-stat" aria-hidden="true">
+              <div class="stat-card">
+                <div class="stat-label">School-wide attendance, today</div>
+                <div class="stat-value">94<span class="stat-unit">%</span></div>
+                <div class="stat-bar-track"><div class="stat-bar-fill" style="width:94%"></div></div>
+                <div class="stat-sub">76 students marked absent, 3 classes pending</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-row">
+            <div class="feature-content">
+              <h3>Results and Report Cards</h3>
+              <p>Subject teachers enter scores; the system computes grades, class rankings, and cumulative GPA automatically. Report cards are generated and ready to share. No spreadsheet required.</p>
+            </div>
+            <div class="feature-stat" aria-hidden="true">
+              <div class="stat-card">
+                <div class="stat-label">Class average: JSS 3A, Mathematics</div>
+                <div class="stat-value">B<span class="stat-unit">+</span></div>
+                <div class="stat-bar-track"><div class="stat-bar-fill" style="width:72%"></div></div>
+                <div class="stat-sub">Top student: 94/100 &nbsp;|&nbsp; Lowest: 41/100</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="feature-row feature-row--reverse">
+            <div class="feature-content">
+              <h3>Timetable and Scheduling</h3>
+              <p>Build class timetables, assign teachers, and allocate rooms. Conflict detection flags clashes before you publish, so no teacher is scheduled in two rooms at once.</p>
+            </div>
+            <div class="feature-stat" aria-hidden="true">
+              <div class="stat-card stat-card--table">
+                <div class="stat-label">Sample timetable: Monday</div>
+                <table class="mini-table" aria-label="Sample Monday timetable">
+                  <thead>
+                    <tr><th>Period</th><th>Subject</th><th>Teacher</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>08:00</td><td>Mathematics</td><td>Mr. Obi</td></tr>
+                    <tr><td>09:00</td><td>English</td><td>Mrs. Eze</td></tr>
+                    <tr><td>10:00</td><td>Biology</td><td>Mr. Adeyemi</td></tr>
+                    <tr><td>11:00</td><td>Civic Ed.</td><td>Miss Balogun</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works" id="how-it-works" aria-labelledby="hiw-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="hiw-heading">Up and running in three steps</h2>
+        </header>
+        <ol class="steps-list" role="list">
+          <li class="step">
+            <span class="step-number" aria-hidden="true">1</span>
+            <div class="step-body">
+              <h3>Tell us about your school</h3>
+              <p>We collect your school name, structure (classes, arms, subjects), and staff list. Your branded portal is provisioned at <em>yourschool.alimo.cloud</em> within one business day.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-number" aria-hidden="true">2</span>
+            <div class="step-body">
+              <h3>Import your existing data</h3>
+              <p>Upload student records as a spreadsheet. Our onboarding team reviews and imports the data for you, so your staff don't face a blank system on day one.</p>
+            </div>
+          </li>
+          <li class="step">
+            <span class="step-number" aria-hidden="true">3</span>
+            <div class="step-body">
+              <h3>Train your admin and go live</h3>
+              <p>A one-hour walkthrough covers daily workflows for your registrar, bursary, and teachers. Most schools are fully operational within a week of their first demo.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- EDITIONS -->
+    <section class="editions" id="editions" aria-labelledby="editions-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="editions-heading">Built for every tier of education</h2>
+          <p class="section-intro">Each edition is sized to the institution it serves. All editions share the same core modules.</p>
+        </header>
+        <div class="editions-grid">
+
+          <div class="edition-card">
+            <div class="edition-badge">EduCloud Lite</div>
+            <h3>Primary and Secondary Schools</h3>
+            <p>Covers K–12 institutions with the full fee, attendance, result, and timetable module set. Sized for schools up to a few thousand students.</p>
+            <a href="#demo" class="btn btn-outline">Request pricing</a>
+          </div>
+
+          <div class="edition-card edition-card--featured">
+            <div class="edition-badge">EduCloud Pro</div>
+            <h3>Colleges and Polytechnics</h3>
+            <p>Adds department-level structure, semester scheduling, and credit-unit grade computation to the core suite.</p>
+            <a href="#demo" class="btn btn-primary">Request pricing</a>
+          </div>
+
+          <div class="edition-card">
+            <div class="edition-badge">EduCloud Enterprise</div>
+            <h3>Universities</h3>
+            <p>Multi-faculty, multi-department tenancy, faculty portals, and dedicated support. Contact us to discuss your institution's requirements.</p>
+            <a href="#demo" class="btn btn-outline">Contact us</a>
+          </div>
+
+        </div>
+        <p class="editions-note">Pricing is quoted per institution based on enrollment size. There are no per-user licence fees.</p>
+      </div>
+    </section>
+
+    <!-- DEMO FORM -->
+    <section class="demo-section" id="demo" aria-labelledby="demo-heading">
+      <div class="container container--narrow">
+        <header class="section-header">
+          <h2 id="demo-heading">Request a demo</h2>
+          <p class="section-intro">Fill in the form and an Alimo team member will be in touch within one business day to schedule a walkthrough.</p>
+        </header>
+
+        <form class="demo-form" id="demo-form" novalidate aria-describedby="form-status">
+          <div id="form-status" role="status" aria-live="polite" class="form-status" aria-hidden="true"></div>
+
+          <div class="form-row form-row--two">
+            <div class="form-field">
+              <label for="first-name">First name <span class="required" aria-hidden="true">*</span></label>
+              <input type="text" id="first-name" name="first-name" autocomplete="given-name" required aria-required="true" />
+              <span class="field-error" id="first-name-error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-field">
+              <label for="last-name">Last name <span class="required" aria-hidden="true">*</span></label>
+              <input type="text" id="last-name" name="last-name" autocomplete="family-name" required aria-required="true" />
+              <span class="field-error" id="last-name-error" role="alert" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Work email <span class="required" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required aria-required="true" aria-describedby="email-error" />
+            <span class="field-error" id="email-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="school-name">School name <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="school-name" name="school-name" required aria-required="true" aria-describedby="school-name-error" />
+            <span class="field-error" id="school-name-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-row form-row--two">
+            <div class="form-field">
+              <label for="school-type">School type <span class="required" aria-hidden="true">*</span></label>
+              <select id="school-type" name="school-type" required aria-required="true" aria-describedby="school-type-error">
+                <option value="" disabled selected>Select one</option>
+                <option value="primary">Primary school</option>
+                <option value="secondary">Secondary school</option>
+                <option value="college">College / Polytechnic</option>
+                <option value="university">University</option>
+                <option value="other">Other</option>
+              </select>
+              <span class="field-error" id="school-type-error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-field">
+              <label for="enrollment">Approximate student enrollment</label>
+              <select id="enrollment" name="enrollment">
+                <option value="" disabled selected>Select a range</option>
+                <option value="under-500">Under 500</option>
+                <option value="500-1500">500 – 1,500</option>
+                <option value="1500-5000">1,500 – 5,000</option>
+                <option value="5000-plus">5,000 and above</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Anything specific you want to cover in the demo? <span class="label-optional">(Optional)</span></label>
+            <textarea id="message" name="message" rows="4" placeholder="e.g. fee collection integration, multi-branch support, importing existing student records…"></textarea>
+          </div>
+
+          <div class="form-field form-field--checkbox">
+            <label class="checkbox-label">
+              <input type="checkbox" id="privacy-consent" name="privacy-consent" required aria-required="true" aria-describedby="consent-error" />
+              <span>I have read the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a> and agree that Alimo Digital Innovations Ltd may use my details to respond to this request.</span>
+            </label>
+            <span class="field-error" id="consent-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+            <span class="btn-label">Send request</span>
+            <span class="btn-loading" aria-hidden="true" hidden>Sending…</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="wordmark">Alimo <span class="wordmark-accent">EduCloud</span></span>
+        <p class="footer-tagline">A product of Alimo Digital Innovations Ltd.</p>
+        <p class="footer-address">Nigeria &nbsp;|&nbsp; West Africa</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <ul role="list">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#editions">Editions</a></li>
+          <li><a href="#demo">Request a Demo</a></li>
+        </ul>
+        <ul role="list">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-legal container">
+      <p>&copy; <span id="copyright-year"></span> Alimo Digital Innovations Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
