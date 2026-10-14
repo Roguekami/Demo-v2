@@ -105,7 +105,7 @@ function clearStatus() {
 }
 
 if (form) {
-  form.addEventListener('submit', async e => {
+  form.addEventListener('submit', e => {
     e.preventDefault();
     clearStatus();
 
@@ -126,30 +126,22 @@ if (form) {
       return;
     }
 
-    // Simulate submission (replace with real endpoint)
-    const label = submitBtn.querySelector('.btn-label');
-    const loading = submitBtn.querySelector('.btn-loading');
-    submitBtn.disabled = true;
-    label.hidden = true;
-    loading.hidden = false;
+    // There is no submit endpoint yet, so the form validates and then says
+    // so rather than claiming a request was sent. To make it live: POST the
+    // FormData here, show the pending state while the request is in flight,
+    // and switch the status below to 'success' on a 2xx response.
+    //
+    //   submitBtn.disabled = true;
+    //   const res = await fetch('/api/demo-request', { method: 'POST', body: new FormData(form) });
+    //   submitBtn.disabled = false;
+    //   if (!res.ok) return showStatus('error', 'Something went wrong. Please try again.');
+    //   form.reset();
+    //   showStatus('success', 'Thank you. Your demo request has been received.');
 
-    await new Promise(res => setTimeout(res, 1200));
-
-    // Success state
-    label.hidden = false;
-    loading.hidden = true;
-    submitBtn.disabled = false;
-    form.reset();
-
-    // Clear aria-invalid states
-    Object.keys(rules).forEach(name => {
-      const el = form.elements[name];
-      if (el) el.removeAttribute('aria-invalid');
-    });
-
+    // The entries stay in the fields, since nothing has been sent anywhere.
     showStatus(
-      'success',
-      'Thank you. Your demo request has been received. An Alimo team member will be in touch within one business day.'
+      'notice',
+      'Your details are complete. This site is not yet connected to an inbox, so nothing has been sent. Draft for review: add the form endpoint before launch.'
     );
   });
 }

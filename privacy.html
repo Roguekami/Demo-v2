@@ -7,7 +7,7 @@
   <meta name="description" content="How Alimo Digital Innovations Ltd collects, uses, and protects your data when you use Alimo EduCloud." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
     .legal-page { padding-block: calc(var(--gap) * 14); }
@@ -19,12 +19,12 @@
     .legal-body ul { color: var(--ink-2); padding-left: calc(var(--gap) * 3); margin-bottom: calc(var(--gap) * 2); }
     .legal-body li { margin-bottom: var(--gap); }
     .draft-notice {
-      background-color: #FFF8E6;
-      border: 1px solid #E8D095;
+      background-color: #FFFBEB;
+      border: 1px solid #FDE68A;
       border-radius: var(--radius);
       padding: calc(var(--gap) * 2) calc(var(--gap) * 3);
       font-size: var(--text-sm);
-      color: #6B5010;
+      color: #92400E;
       margin-bottom: calc(var(--gap) * 6);
     }
     .legal-back { margin-bottom: calc(var(--gap) * 6); display: inline-block; font-size: var(--text-sm); color: var(--accent); }
@@ -65,15 +65,16 @@
         <ul>
           <li>To provide, maintain, and improve the EduCloud platform.</li>
           <li>To respond to demo requests and onboarding enquiries.</li>
-          <li>To send transactional notifications (fee reminders, attendance alerts, result releases) to parents and staff.</li>
-          <li>To process payments through Paystack or Flutterwave on behalf of the subscribing school.</li>
+          <li>To send transactional notifications to parents and staff. Today this is an SMS when a teacher publishes results. [PENDING: confirm whether fee reminders and attendance alerts will also be sent, and update this list before launch.]</li>
+          <li>To record fee payments that a school enters after it has received the money. EduCloud has no payment gateway, so no card or bank credentials pass through the portal.</li>
           <li>To comply with applicable Nigerian law, including [PENDING: reference NITDA Data Protection Regulation 2019 or successor legislation].</li>
         </ul>
 
         <h2>Data sharing</h2>
         <p>We do not sell personal data. We share data only with the following processors where necessary to deliver the service:</p>
         <ul>
-          <li><strong>Paystack / Flutterwave</strong>: payment processing (governed by their own privacy policies).</li>
+          <li><strong>Termii</strong>: SMS delivery for result notifications (governed by its own privacy policy).</li>
+          <li>[PENDING: name the processor used for school subscription invoices, if any. No processor handles parent fee payments, which are made to the school directly.]</li>
           <li><strong>Cloudflare R2</strong>: file and document storage.</li>
           <li><strong>Hosting provider</strong>: [PENDING: confirm cloud hosting provider and location].</li>
         </ul>

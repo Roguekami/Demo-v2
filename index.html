@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alimo EduCloud: Smart School Management Platform</title>
-  <meta name="description" content="Alimo EduCloud gives Nigerian schools a complete, cloud-based management platform: fees, attendance, results, timetables, and parent communication, all in one branded portal." />
+  <meta name="description" content="Alimo EduCloud gives Nigerian schools one branded portal for fees, attendance, results, CBT exams, and announcements, with a single login for administrators, teachers, and students." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -27,7 +27,7 @@
         <li><a href="#features">Features</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#editions">Editions</a></li>
-        <li><a href="dashboard.html">Live Demo</a></li>
+        <li><a href="portal/dist/index.html">Live Demo</a></li>
         <li><a href="#demo" class="nav-cta">Request a Demo</a></li>
       </ul>
     </nav>
@@ -42,7 +42,7 @@
           <p class="eyebrow">Smart School Management</p>
           <h1 id="hero-heading">Your school, fully managed in the cloud</h1>
           <p class="hero-body">
-            Alimo EduCloud gives every school its own branded portal, covering fees, attendance, results, timetables, and parent communication from a single admin dashboard.
+            One login for administrators, teachers, and students. Fees, attendance, results, CBT exams, and announcements run in a single portal branded for your school. Parents sign in with their child's account.
           </p>
           <div class="hero-actions">
             <a href="#demo" class="btn btn-primary">Request a Demo</a>
@@ -50,25 +50,65 @@
           </div>
         </div>
         <div class="hero-visual">
-          <a href="dashboard.html" class="browser-frame browser-frame--link" aria-label="Open the live admin dashboard demo">
+          <a href="portal/dist/index.html" class="browser-frame browser-frame--link" aria-label="Open the live school portal demo">
             <span class="browser-bar">
               <span class="browser-dot"></span>
               <span class="browser-dot"></span>
               <span class="browser-dot"></span>
               <span class="browser-address">lincolnacademy.alimo.cloud</span>
             </span>
-            <img
-              src="dashboard_mockup_1791887267934.jpg"
-              alt="Alimo EduCloud admin dashboard showing enrollment summary, fee collection rate, and attendance overview"
-              class="dashboard-img"
-              width="960"
-              height="540"
-            />
+            <span class="portal-shot">
+              <span class="portal-shot-rail" aria-hidden="true">
+                <span class="portal-shot-brand">Alimo <span>EduCloud</span></span>
+                <span class="portal-shot-navitem is-active">Dashboard</span>
+                <span class="portal-shot-navitem">Students</span>
+                <span class="portal-shot-navitem">Teachers</span>
+                <span class="portal-shot-navitem">Classes &amp; Subjects</span>
+                <span class="portal-shot-navitem">Fee Management</span>
+                <span class="portal-shot-navitem">Announcements</span>
+              </span>
+              <span class="portal-shot-main">
+                <span class="portal-shot-head">
+                  <span class="portal-shot-title">Dashboard</span>
+                  <span class="portal-shot-who">Administrator</span>
+                </span>
+                <span class="portal-shot-tiles">
+                  <span class="portal-tile">
+                    <span class="portal-tile-label">Total students</span>
+                    <span class="portal-tile-value">20</span>
+                    <span class="portal-tile-sub">Currently enrolled</span>
+                  </span>
+                  <span class="portal-tile">
+                    <span class="portal-tile-label">Teachers</span>
+                    <span class="portal-tile-value">7</span>
+                    <span class="portal-tile-sub">Active staff</span>
+                  </span>
+                  <span class="portal-tile">
+                    <span class="portal-tile-label">Fees collected</span>
+                    <span class="portal-tile-value">&#8358;1,195,000</span>
+                    <span class="portal-tile-meter"><span style="width:88%"></span></span>
+                    <span class="portal-tile-sub">88% of this term</span>
+                  </span>
+                  <span class="portal-tile">
+                    <span class="portal-tile-label">Fees outstanding</span>
+                    <span class="portal-tile-value">&#8358;165,000</span>
+                    <span class="portal-tile-sub">5 students owing</span>
+                  </span>
+                </span>
+                <span class="portal-shot-panel">
+                  <span class="portal-panel-head">Upcoming events</span>
+                  <span class="portal-event"><span class="portal-event-date">28 Feb</span> Inter-House Sports Day</span>
+                  <span class="portal-event"><span class="portal-event-date">7 Mar</span> Science Fair Exhibition</span>
+                  <span class="portal-event"><span class="portal-event-date">24 Mar</span> End of Term Examinations</span>
+                </span>
+              </span>
+            </span>
             <span class="frame-cta">
-              Open the live dashboard
+              Open the live portal
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </span>
           </a>
+          <p class="visual-note">The portal as it ships, drawn with the demo school's data. Open it to sign in as an administrator, a teacher, or a student.</p>
         </div>
       </div>
     </section>
@@ -77,80 +117,92 @@
     <section class="features" id="features" aria-labelledby="features-heading">
       <div class="container">
         <header class="section-header">
-          <h2 id="features-heading">Every part of school operations, covered</h2>
-          <p class="section-intro">Six core modules work together so your staff stop chasing paper and start having answers.</p>
+          <h2 id="features-heading">What the portal does</h2>
+          <p class="section-intro">Every figure on this page comes from the demo school you can open above. Nothing here is a mockup of a feature that is not built.</p>
         </header>
 
         <div class="feature-list">
 
           <article class="feature-row">
             <div class="feature-content">
-              <h3>Fee Management</h3>
-              <p>Generate invoices, track outstanding balances per student, and accept payment through Paystack or Flutterwave. Payment history is available to parents the moment a transaction clears.</p>
+              <h3>Fee management</h3>
+              <p>Set the termly amount per class, then record each payment as it arrives by bank transfer, cash, or POS. Every student carries an amount due, an amount paid, and a running balance, so part payments are ordinary rather than an exception. Students and parents read the same statement from their own login.</p>
+              <p class="feature-note">Fees are paid to the school directly. There is no payment gateway in the portal, and no card details pass through it.</p>
             </div>
             <div class="feature-stat" aria-hidden="true">
               <div class="stat-card">
-                <div class="stat-label">Collection rate this term</div>
-                <div class="stat-value">78<span class="stat-unit">%</span></div>
-                <div class="stat-bar-track"><div class="stat-bar-fill" style="width:78%"></div></div>
-                <div class="stat-sub">Outstanding: 22% across 272 students</div>
+                <div class="stat-label">Collection rate, demo term</div>
+                <div class="stat-value">88<span class="stat-unit">%</span></div>
+                <div class="stat-bar-track"><div class="stat-bar-fill" style="width:88%"></div></div>
+                <div class="stat-sub">&#8358;1,195,000 collected, &#8358;165,000 outstanding across 5 students, from 22 recorded payments</div>
               </div>
             </div>
           </article>
 
           <article class="feature-row feature-row--reverse">
             <div class="feature-content">
-              <h3>Attendance Tracking</h3>
-              <p>Mark daily or period-based attendance in seconds. Absentee alerts go to parents automatically. Trend reports show you which classes need follow-up before the term ends.</p>
+              <h3>Attendance</h3>
+              <p>A teacher opens the class roster and every student starts marked present, so the register takes as long as the exceptions do. One save commits the whole day. Students and parents see the term summary as days present, days absent, and a percentage, not a raw log.</p>
             </div>
             <div class="feature-stat" aria-hidden="true">
               <div class="stat-card">
-                <div class="stat-label">School-wide attendance, today</div>
-                <div class="stat-value">94<span class="stat-unit">%</span></div>
-                <div class="stat-bar-track"><div class="stat-bar-fill" style="width:94%"></div></div>
-                <div class="stat-sub">76 students marked absent, 3 classes pending</div>
+                <div class="stat-label">Attendance, demo term</div>
+                <div class="stat-value">88<span class="stat-unit">%</span></div>
+                <div class="stat-bar-track"><div class="stat-bar-fill" style="width:88%"></div></div>
+                <div class="stat-sub">176 of 200 school days present, across the 10 students who have records in the demo</div>
               </div>
             </div>
           </article>
 
           <article class="feature-row">
             <div class="feature-content">
-              <h3>Results and Report Cards</h3>
-              <p>Subject teachers enter scores; the system computes grades, class rankings, and cumulative GPA automatically. Report cards are generated and ready to share. No spreadsheet required.</p>
+              <h3>Results and report cards</h3>
+              <p>Subject teachers enter a score and an optional remark for each student. Where a student sat the CBT exam, the score is already in the field. The portal totals the term, works out the average, and lays it out as a report card the school can print. Publishing results sends an SMS to the number on the student's record.</p>
             </div>
             <div class="feature-stat" aria-hidden="true">
-              <div class="stat-card">
-                <div class="stat-label">Class average: JSS 3A, Mathematics</div>
-                <div class="stat-value">B<span class="stat-unit">+</span></div>
-                <div class="stat-bar-track"><div class="stat-bar-fill" style="width:72%"></div></div>
-                <div class="stat-sub">Top student: 94/100 &nbsp;|&nbsp; Lowest: 41/100</div>
+              <div class="stat-card stat-card--table">
+                <div class="stat-label">Report card, demo student: Chidera Eze, SS2</div>
+                <table class="mini-table" aria-label="Report card extract for the demo student Chidera Eze">
+                  <thead>
+                    <tr><th>Subject</th><th>Score</th><th>Remark</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Mathematics</td><td>82</td><td>Excellent work</td></tr>
+                    <tr><td>Computer Science</td><td>88</td><td>Outstanding</td></tr>
+                    <tr><td>English Language</td><td>71</td><td>Good effort</td></tr>
+                    <tr><td>Economics</td><td>65</td><td>Satisfactory</td></tr>
+                  </tbody>
+                </table>
+                <div class="stat-sub">8 subjects recorded for 2024/2025 Term 1, average 75.0</div>
               </div>
             </div>
           </article>
 
           <article class="feature-row feature-row--reverse">
             <div class="feature-content">
-              <h3>Timetable and Scheduling</h3>
-              <p>Build class timetables, assign teachers, and allocate rooms. Conflict detection flags clashes before you publish, so no teacher is scheduled in two rooms at once.</p>
+              <h3>CBT exams</h3>
+              <p>A teacher picks the subject and class, sets the window and the duration, and adds multiple-choice questions with the correct option marked. Publishing stays locked until at least one question exists. Students sit the exam on a screen of its own: a timer, one question at a time, a flag for anything to revisit, and a confirmation step so an exam cannot end by accident. Scores flow straight into results entry.</p>
             </div>
             <div class="feature-stat" aria-hidden="true">
-              <div class="stat-card stat-card--table">
-                <div class="stat-label">Sample timetable: Monday</div>
-                <table class="mini-table" aria-label="Sample Monday timetable">
-                  <thead>
-                    <tr><th>Period</th><th>Subject</th><th>Teacher</th></tr>
-                  </thead>
-                  <tbody>
-                    <tr><td>08:00</td><td>Mathematics</td><td>Mr. Obi</td></tr>
-                    <tr><td>09:00</td><td>English</td><td>Mrs. Eze</td></tr>
-                    <tr><td>10:00</td><td>Biology</td><td>Mr. Adeyemi</td></tr>
-                    <tr><td>11:00</td><td>Civic Ed.</td><td>Miss Balogun</td></tr>
-                  </tbody>
-                </table>
+              <div class="stat-card">
+                <div class="stat-label">Published exam in the demo</div>
+                <dl class="spec-list">
+                  <div class="spec-row"><dt>Subject</dt><dd>Mathematics, SS2</dd></div>
+                  <div class="spec-row"><dt>Questions</dt><dd>10 in the bank</dd></div>
+                  <div class="spec-row"><dt>Duration</dt><dd>30 minutes</dd></div>
+                  <div class="spec-row"><dt>Window</dt><dd>24 March 2025, 09:00 to 12:00</dd></div>
+                  <div class="spec-row"><dt>Sat so far</dt><dd>4 students, scores 60 to 90</dd></div>
+                </dl>
               </div>
             </div>
           </article>
 
+        </div>
+
+        <div class="feature-close">
+          <h3>Also in every portal</h3>
+          <p>Administrators post announcements and events to one feed that teachers and students both read. Teachers upload notes and past papers per class and subject, and students open them from their own Resources page. Classes and subjects are managed as a pair of linked panels, with a teacher assigned to each subject. A teacher who leaves is deactivated rather than deleted, so last year's results keep their author.</p>
+          <p>Parents do not get a separate account. They sign in with their child's login, which is how a parent sees fees, attendance, and results without the school maintaining a second set of credentials.</p>
         </div>
       </div>
     </section>
@@ -199,7 +251,7 @@
           <div class="edition-card">
             <div class="edition-badge">EduCloud Lite</div>
             <h3>Primary and Secondary Schools</h3>
-            <p>Covers K–12 institutions with the full fee, attendance, result, and timetable module set. Sized for schools up to a few thousand students.</p>
+            <p>Covers K-12 institutions with the full fee, attendance, result, exam, and resource module set. Sized for schools up to a few thousand students.</p>
             <a href="#demo" class="btn btn-outline">Request pricing</a>
           </div>
 
@@ -276,8 +328,8 @@
               <select id="enrollment" name="enrollment">
                 <option value="" disabled selected>Select a range</option>
                 <option value="under-500">Under 500</option>
-                <option value="500-1500">500 – 1,500</option>
-                <option value="1500-5000">1,500 – 5,000</option>
+                <option value="500-1500">500 to 1,500</option>
+                <option value="1500-5000">1,500 to 5,000</option>
                 <option value="5000-plus">5,000 and above</option>
               </select>
             </div>
@@ -296,10 +348,7 @@
             <span class="field-error" id="consent-error" role="alert" aria-live="polite"></span>
           </div>
 
-          <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
-            <span class="btn-label">Send request</span>
-            <span class="btn-loading" aria-hidden="true" hidden>Sending…</span>
-          </button>
+          <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">Send request</button>
         </form>
       </div>
     </section>
