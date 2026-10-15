@@ -145,3 +145,93 @@ if (form) {
     );
   });
 }
+
+// ── Animated Stat Bars & Percentage Counter ─────────────────
+function initStatAnimations() {
+  const statBars = document.querySelectorAll('.stat-bar-track');
+  if (!statBars.length) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const cardsToAnimate = [];
+  statBars.forEach(track => {
+    const card = track.closest('.stat-card');
+    if (!card) return;
+    const fillEl = track.querySelector('.stat-bar-fill');
+    const valueEl = card.querySelector('.stat-value');
+    if (!fillEl || !valueEl) return;
+
+    const targetWidth = fillEl.style.width || '88%';
+    const match = valueEl.textContent.match(/(\d+)/);
+    const targetVal = match ? parseInt(match[1], 10) : 88;
+    const unitEl = valueEl.querySelector('.stat-unit');
+    const unitHtml = unitEl ? unitEl.outerHTML : '<span class="stat-unit">%</span>';
+
+    if (!prefersReducedMotion) {
+      fillEl.style.width = '0%';
+      valueEl.innerHTML = '0' + unitHtml;
+    }
+
+    cardsToAnimate.push({ card, fillEl, valueEl, targetWidth, targetVal, unitHtml });
+  });
+
+  const runAnimation = (item) => {
+    if (prefersReducedMotion) {
+      item.fillEl.style.width = item.targetWidth;
+      item.valueEl.innerHTML = item.targetVal + item.unitHtml;
+      return;
+    }
+
+    // Animate progress bar fill smoothly
+    item.fillEl.style.transition = 'width 1.3s cubic-bezier(0.16, 1, 0.3, 1)';
+    requestAnimationFrame(() => {
+      item.fillEl.style.width = item.targetWidth;
+    });
+
+    // Animate number count-up
+    const duration = 1300;
+    const startTime = performance.now();
+
+    function updateCount(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // easeOutCubic
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(ease * item.targetVal);
+
+      item.valueEl.innerHTML = current + item.unitHtml;
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCount);
+      } else {
+        item.valueEl.innerHTML = item.targetVal + item.unitHtml;
+      }
+    }
+
+    requestAnimationFrame(updateCount);
+  };
+
+  if ('IntersectionObserver' in window && !prefersReducedMotion) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const matched = cardsToAnimate.find(c => c.card === entry.target);
+          if (matched) {
+            runAnimation(matched);
+            obs.unobserve(entry.target);
+          }
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cardsToAnimate.forEach(c => observer.observe(c.card));
+  } else {
+    cardsToAnimate.forEach(c => runAnimation(c));
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initStatAnimations);
+} else {
+  initStatAnimations();
+}
