@@ -139,7 +139,6 @@ ul, ol { list-style: none; }
   font-weight: 500;
   color: var(--sidebar-text);
   transition: all var(--ease);
-  border-left: 3px solid transparent;
   margin-bottom: 2px;
 }
 .sidebar-link:hover {
@@ -149,7 +148,6 @@ ul, ol { list-style: none; }
 .sidebar-link.active {
   background: var(--sidebar-active);
   color: var(--sidebar-text-active);
-  border-left-color: var(--sidebar-accent);
   font-weight: 500;
 }
 .sidebar-link svg { width: 20px; height: 20px; flex-shrink: 0; opacity: .7; }

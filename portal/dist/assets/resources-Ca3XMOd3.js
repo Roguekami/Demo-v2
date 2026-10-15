@@ -1,4 +1,4 @@
-import{F as c,z as l,J as r,j as o,e as d,h as v}from"./index-DNKaiGY_.js";import{t as m}from"./modal-Dzxcghj1.js";import{fileIcon as f}from"./resources-KS-VcAQG.js";function h(){const s=c(l().studentId),n=r.filter(t=>t.class===s.class),a={};return n.forEach(t=>{var i;(a[i=t.subject]??(a[i]=[])).push(t)}),`
+import{F as c,z as l,J as r,j as o,e as d,h as v}from"./index-CEYCdedo.js";import{t as m}from"./modal-Bs8ai2sk.js";import{fileIcon as f}from"./resources-C4zs77z_.js";function h(){const s=c(l().studentId),n=r.filter(t=>t.class===s.class),a={};return n.forEach(t=>{var i;(a[i=t.subject]??(a[i]=[])).push(t)}),`
     <div class="page-header">
       <h2>Learning Resources</h2>
       <span class="text-sm text-secondary">Shared with ${s.class}</span>

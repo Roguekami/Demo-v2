@@ -1,4 +1,4 @@
-import{u as m,t as j,q as b,e as u,l as o,j as h,o as g,r as I}from"./index-DNKaiGY_.js";import{t as p,o as $,f as r}from"./modal-Dzxcghj1.js";var y;let n=(y=o[0])==null?void 0:y.id;function L(){var i;o.some(s=>s.id===n)||(n=(i=o[0])==null?void 0:i.id);const d=o.map(s=>`
+import{u as m,t as j,q as b,e as u,l as o,j as h,o as g,r as I}from"./index-CEYCdedo.js";import{t as p,o as $,f as r}from"./modal-Bs8ai2sk.js";var y;let n=(y=o[0])==null?void 0:y.id;function L(){var i;o.some(s=>s.id===n)||(n=(i=o[0])==null?void 0:i.id);const d=o.map(s=>`
     <div class="panel-item ${s.id===n?"active":""}" data-class-id="${s.id}">
       <div>${u(s.name)}</div>
       <div class="panel-item-count">${s.studentCount} students</div>

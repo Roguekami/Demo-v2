@@ -1,4 +1,4 @@
-import{c,l as u,e as d,j as v,p as x,h as b,k as f,r as h,m as S,o as E}from"./index-DNKaiGY_.js";import{o as m,f as n,t as g}from"./modal-Dzxcghj1.js";function L(){const t=u.map(e=>`<option value="${e.name}">${e.name}</option>`).join(""),a=c.map(e=>{const s=e.feeStatus==="paid"?"badge-success":"badge-danger";return`
+import{c,l as u,e as d,j as v,p as x,h as b,k as f,r as h,m as S,o as E}from"./index-CEYCdedo.js";import{o as m,f as n,t as g}from"./modal-Bs8ai2sk.js";function L(){const t=u.map(e=>`<option value="${e.name}">${e.name}</option>`).join(""),a=c.map(e=>{const s=e.feeStatus==="paid"?"badge-success":"badge-danger";return`
       <tr class="student-row clickable-row" data-id="${e.id}" data-name="${d(e.name.toLowerCase())} ${e.admissionNo.toLowerCase()}" data-class="${e.class}">
         <td class="td-name cell-title">${d(e.name)}</td>
         <td data-label="Class">${e.class}</td>

@@ -1,4 +1,4 @@
-import{s as i,n,d as r,e as c,a as u}from"./index-DNKaiGY_.js";import{o as v,t as b,f as p}from"./modal-Dzxcghj1.js";function y(){return`
+import{s as i,n,d as r,e as c,a as u}from"./index-CEYCdedo.js";import{o as v,t as b,f as p}from"./modal-Bs8ai2sk.js";function y(){return`
     <div class="login-layout">
       <div class="login-card">
         <div class="login-logo">Alimo <span>EduCloud</span></div>

@@ -1,4 +1,4 @@
-import{j as c}from"./index-DNKaiGY_.js";let o=null,u=null;function y(){o||(o=document.createElement("div"),o.id="modal-root",document.body.appendChild(o))}function h({title:t,content:a,footer:e,submitLabel:d="Save",onSubmit:l}){var m;y(),clearTimeout(u);const f=e??`
+import{j as c}from"./index-CEYCdedo.js";let o=null,u=null;function y(){o||(o=document.createElement("div"),o.id="modal-root",document.body.appendChild(o))}function h({title:t,content:a,footer:e,submitLabel:d="Save",onSubmit:l}){var m;y(),clearTimeout(u);const f=e??`
     <button class="btn btn-secondary" data-modal-close>Cancel</button>
     <button class="btn btn-primary" data-modal-submit>${d}</button>
   `;o.innerHTML=`

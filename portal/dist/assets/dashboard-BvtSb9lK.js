@@ -1,4 +1,4 @@
-import{n as m,t as g,g as b,b as p,c,f as $,h,e as a,i as f,j as s,k as l}from"./index-DNKaiGY_.js";import{openEnrollModal as y}from"./students-Be3W3AtS.js";import{openAnnouncementModal as E}from"./announcements-D1437T7S.js";import"./modal-Dzxcghj1.js";function A(){const v=c.length,o=g.filter(t=>t.status==="active").length,d=b(),e=p(),n=Math.round(d/(d+e||1)*100),i=c.filter(t=>t.amountDue>t.amountPaid).length,r=$.slice(0,2).map(t=>`
+import{n as m,t as g,g as b,b as p,c,f as $,h,e as a,i as f,j as s,k as l}from"./index-CEYCdedo.js";import{openEnrollModal as y}from"./students-Bz0TWxt_.js";import{openAnnouncementModal as E}from"./announcements-BSFUKiqJ.js";import"./modal-Bs8ai2sk.js";function A(){const v=c.length,o=g.filter(t=>t.status==="active").length,d=b(),e=p(),n=Math.round(d/(d+e||1)*100),i=c.filter(t=>t.amountDue>t.amountPaid).length,r=$.slice(0,2).map(t=>`
     <div class="announcement-card">
       <div class="announcement-date">${h(t.date)}</div>
       <div class="announcement-title">${a(t.title)}</div>

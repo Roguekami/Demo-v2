@@ -1,4 +1,4 @@
-import{j as i,r as c,J as d,e as o,h as u,z as p,v as m,o as f}from"./index-DNKaiGY_.js";import{t as n}from"./modal-Dzxcghj1.js";const v=["SS1","SS2"],h=["Mathematics","Further Mathematics"],a={class:"SS2",subject:"Mathematics"};function g(s){const e=s.split(".").pop().toLowerCase();return e==="pdf"?"PDF":["png","jpg","jpeg","gif","webp"].includes(e)?"Image":"Document"}function b(s){return s==="Image"?i.image:s==="PDF"?i.fileText:i.file}function E(){const s=d.filter(t=>t.class===a.class&&t.subject===a.subject),e=s.map(t=>`
+import{j as i,r as c,J as d,e as o,h as u,z as p,v as m,o as f}from"./index-CEYCdedo.js";import{t as n}from"./modal-Bs8ai2sk.js";const v=["SS1","SS2"],h=["Mathematics","Further Mathematics"],a={class:"SS2",subject:"Mathematics"};function g(s){const e=s.split(".").pop().toLowerCase();return e==="pdf"?"PDF":["png","jpg","jpeg","gif","webp"].includes(e)?"Image":"Document"}function b(s){return s==="Image"?i.image:s==="PDF"?i.fileText:i.file}function E(){const s=d.filter(t=>t.class===a.class&&t.subject===a.subject),e=s.map(t=>`
     <div class="file-item">
       <div class="file-icon">${b(t.type)}</div>
       <div class="file-info">

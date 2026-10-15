@@ -1,4 +1,4 @@
-import{r as i,A as p,w as d,c as g,e as m,j as r}from"./index-DNKaiGY_.js";import{t as v}from"./modal-Dzxcghj1.js";const b={present:"active",late:"active-warning",absent:"active-danger"},l=new Set;function h(){return["SS1","SS2"]}function $(){const t=h(),e=t.includes(d.attendanceClass)?d.attendanceClass:t[0];d.attendanceClass=e;const n=new Date().toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short",year:"numeric"}),a=g.filter(s=>s.class===e),c=a.map((s,u)=>`
+import{r as i,A as p,w as d,c as g,e as m,j as r}from"./index-CEYCdedo.js";import{t as v}from"./modal-Bs8ai2sk.js";const b={present:"active",late:"active-warning",absent:"active-danger"},l=new Set;function h(){return["SS1","SS2"]}function $(){const t=h(),e=t.includes(d.attendanceClass)?d.attendanceClass:t[0];d.attendanceClass=e;const n=new Date().toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short",year:"numeric"}),a=g.filter(s=>s.class===e),c=a.map((s,u)=>`
     <tr data-student-id="${s.id}">
       <td class="text-muted cell-hide-mobile">${u+1}</td>
       <td class="td-name cell-title">${m(s.name)}</td>

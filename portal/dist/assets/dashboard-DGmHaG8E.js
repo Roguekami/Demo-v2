@@ -1,4 +1,4 @@
-import{n as v,F as o,G as u,C as d,j as i,y as m,e as r,k as p,h as b,f as g,z as $}from"./index-DNKaiGY_.js";function h(){const t=$(),a=o(t.studentId),s=u(t.studentId)??{daysPresent:0,totalDays:0},n=s.totalDays?Math.round(s.daysPresent/s.totalDays*100):0,c=a.amountDue-a.amountPaid,e=g[0],l=a.name.split(" ")[0];return`
+import{n as v,F as o,G as u,C as d,j as i,y as m,e as r,k as p,h as b,f as g,z as $}from"./index-CEYCdedo.js";function h(){const t=$(),a=o(t.studentId),s=u(t.studentId)??{daysPresent:0,totalDays:0},n=s.totalDays?Math.round(s.daysPresent/s.totalDays*100):0,c=a.amountDue-a.amountPaid,e=g[0],l=a.name.split(" ")[0];return`
     <div class="greeting-card flex items-center gap-4">
       <div class="sidebar-avatar" style="width:56px;height:56px;font-size:1.125rem">${t.initials}</div>
       <div>

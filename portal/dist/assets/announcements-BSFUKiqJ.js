@@ -1,4 +1,4 @@
-import{f as t,r as c,v as p,j as d,h as b,e as i,o as l,i as o}from"./index-DNKaiGY_.js";import{t as r,o as v,f as s}from"./modal-Dzxcghj1.js";function g(){const n=t.map(e=>`
+import{f as t,r as c,v as p,j as d,h as b,e as i,o as l,i as o}from"./index-CEYCdedo.js";import{t as r,o as v,f as s}from"./modal-Bs8ai2sk.js";function g(){const n=t.map(e=>`
     <div class="announcement-card">
       <div class="flex justify-between items-center">
         <div class="announcement-date">${b(e.date)}</div>

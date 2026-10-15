@@ -1,4 +1,4 @@
-import{B as a,C as c,j as d,e as p,z as B,E as I,n as L}from"./index-DNKaiGY_.js";import{o as x,t as k}from"./modal-Dzxcghj1.js";const S=["A","B","C","D"];let e,g=null;function f(){clearInterval(g),g=null}window.addEventListener("hashchange",()=>{window.location.hash!=="#/student/exams"&&f()});function T(){return a.length?`
+import{B as a,C as c,j as d,e as p,z as B,E as I,n as L}from"./index-CEYCdedo.js";import{o as x,t as k}from"./modal-Bs8ai2sk.js";const S=["A","B","C","D"];let e,g=null;function f(){clearInterval(g),g=null}window.addEventListener("hashchange",()=>{window.location.hash!=="#/student/exams"&&f()});function T(){return a.length?`
     <div class="cbt-layout">
       <div class="cbt-header">
         <div class="cbt-title">${p(c.subject)} &mdash; ${c.class} CBT</div>

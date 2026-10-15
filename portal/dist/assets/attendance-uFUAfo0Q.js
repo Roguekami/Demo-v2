@@ -1,4 +1,4 @@
-import{G as e,z as a}from"./index-DNKaiGY_.js";function l(){const t=e(a().studentId)??{daysPresent:0,daysAbsent:0,totalDays:0},s=t.totalDays?Math.round(t.daysPresent/t.totalDays*100):0;return`
+import{G as e,z as a}from"./index-CEYCdedo.js";function l(){const t=e(a().studentId)??{daysPresent:0,daysAbsent:0,totalDays:0},s=t.totalDays?Math.round(t.daysPresent/t.totalDays*100):0;return`
     <div class="page-header">
       <h2>Attendance Summary</h2>
     </div>

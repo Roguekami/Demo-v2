@@ -1,4 +1,4 @@
-import{r as p,D as b,c as h,E as f,e as v,j as S}from"./index-DNKaiGY_.js";import{t as m}from"./modal-Dzxcghj1.js";const o="2024/2025 — Term 1",$=["SS1","SS2"],j=["Mathematics","Further Mathematics"],s={class:"SS2",subject:"Mathematics"};function g(){const t=h.filter(e=>e.class===s.class),d=f[s.subject]||{};let n=0;const c=t.map((e,i)=>{const a=b.find(u=>u.studentId===e.id&&u.subject===s.subject&&u.term===o),r=d[e.id],l=(a==null?void 0:a.score)??r??"";return!a&&r!==void 0&&n++,`
+import{r as p,D as b,c as h,E as f,e as v,j as S}from"./index-CEYCdedo.js";import{t as m}from"./modal-Bs8ai2sk.js";const o="2024/2025 — Term 1",$=["SS1","SS2"],j=["Mathematics","Further Mathematics"],s={class:"SS2",subject:"Mathematics"};function g(){const t=h.filter(e=>e.class===s.class),d=f[s.subject]||{};let n=0;const c=t.map((e,i)=>{const a=b.find(u=>u.studentId===e.id&&u.subject===s.subject&&u.term===o),r=d[e.id],l=(a==null?void 0:a.score)??r??"";return!a&&r!==void 0&&n++,`
       <tr data-student-id="${e.id}">
         <td class="text-muted cell-hide-mobile">${i+1}</td>
         <td class="td-name cell-title">${v(e.name)}</td>

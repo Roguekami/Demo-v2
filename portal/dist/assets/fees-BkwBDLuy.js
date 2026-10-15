@@ -1,4 +1,4 @@
-import{F as r,z as l,H as i,j as m,k as e,h as p}from"./index-DNKaiGY_.js";function h(){const a=r(l().studentId),c=[...i(a.id)].sort((t,o)=>o.date.localeCompare(t.date)),{amountDue:n,amountPaid:d}=a,s=n-d;return`
+import{F as r,z as l,H as i,j as m,k as e,h as p}from"./index-CEYCdedo.js";function h(){const a=r(l().studentId),c=[...i(a.id)].sort((t,o)=>o.date.localeCompare(t.date)),{amountDue:n,amountPaid:d}=a,s=n-d;return`
     <div class="page-header">
       <h2>Fees & Payment</h2>
       <span class="text-sm text-secondary">2024/2025 &mdash; Term 2</span>

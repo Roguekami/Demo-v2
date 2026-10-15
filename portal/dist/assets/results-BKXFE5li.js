@@ -1,4 +1,4 @@
-import{F as p,z as m,I as v,G as b,j as h,e as d}from"./index-DNKaiGY_.js";const i="2024/2025 — Term 1";function o(t){return t>=70?"A":t>=60?"B":t>=50?"C":t>=40?"D":"F"}function x(){const t=p(m().studentId),s=v(t.id).filter(e=>e.term===i),a=b(t.id),n=s.reduce((e,c)=>e+c.score,0),l=s.length?n/s.length:0,r=o(Math.round(l));return`
+import{F as p,z as m,I as v,G as b,j as h,e as d}from"./index-CEYCdedo.js";const i="2024/2025 — Term 1";function o(t){return t>=70?"A":t>=60?"B":t>=50?"C":t>=40?"D":"F"}function x(){const t=p(m().studentId),s=v(t.id).filter(e=>e.term===i),a=b(t.id),n=s.reduce((e,c)=>e+c.score,0),l=s.length?n/s.length:0,r=o(Math.round(l));return`
     <div class="page-header no-print">
       <h2>Results</h2>
       <div class="flex gap-3">
