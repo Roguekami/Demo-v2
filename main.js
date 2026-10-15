@@ -105,7 +105,7 @@ function clearStatus() {
 }
 
 if (form) {
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     clearStatus();
 
@@ -126,23 +126,42 @@ if (form) {
       return;
     }
 
-    // There is no submit endpoint yet, so the form validates and then says
-    // so rather than claiming a request was sent. To make it live: POST the
-    // FormData here, show the pending state while the request is in flight,
-    // and switch the status below to 'success' on a 2xx response.
-    //
-    //   submitBtn.disabled = true;
-    //   const res = await fetch('/api/demo-request', { method: 'POST', body: new FormData(form) });
-    //   submitBtn.disabled = false;
-    //   if (!res.ok) return showStatus('error', 'Something went wrong. Please try again.');
-    //   form.reset();
-    //   showStatus('success', 'Thank you. Your demo request has been received.');
+    // Submit via AJAX to Formspree
+    const originalBtnText = submitBtn ? submitBtn.textContent : 'Send request';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+    }
 
-    // The entries stay in the fields, since nothing has been sent anywhere.
-    showStatus(
-      'notice',
-      'Your details are complete. This site is not yet connected to an inbox, so nothing has been sent. Draft for review: add the form endpoint before launch.'
-    );
+    try {
+      const response = await fetch(form.action || 'https://formspree.io/f/myeklwbo', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        form.reset();
+        showStatus('success', 'Thank you! Your demo request has been received. We will be in touch within one business day.');
+      } else {
+        const data = await response.json().catch(() => ({}));
+        if (data && data.errors && data.errors.length > 0) {
+          const errorMsg = data.errors.map(err => err.message).join(', ');
+          showStatus('error', `Submission error: ${errorMsg}`);
+        } else {
+          showStatus('error', 'Something went wrong while sending your request. Please try again or contact us directly.');
+        }
+      }
+    } catch (err) {
+      showStatus('error', 'Network error. Please check your internet connection and try again.');
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      }
+    }
   });
 }
 
