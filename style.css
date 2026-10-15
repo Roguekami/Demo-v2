@@ -36,6 +36,7 @@ html {
 
 /* ── Tokens ─────────────────────────────────────────────── */
 :root {
+  color-scheme: light;
   --bg:            #F6F5F4;
   --bg-raised:     #FFFFFF;
   --bg-section:    #EDECEA;
@@ -56,6 +57,14 @@ html {
   --danger:        #DC2626;
   --danger-bg:     #FEF2F2;
   --danger-text:   #991B1B;
+  --success-border:#A7F3D0;
+  --danger-border: #FECACA;
+  --notice-bg:     #FFFBEB;
+  --notice-border: #FDE68A;
+  --notice-text:   #92400E;
+  --ink-inverse-2: #D4D0CB;
+  --ink-inverse-3: #888480;
+  --border-deep:   #333330;
   --radius:        6px;
   --radius-lg:     12px;
   --shadow-sm:     0 1px 3px rgba(15,15,15,0.06), 0 1px 2px rgba(15,15,15,0.04);
@@ -760,30 +769,40 @@ input[aria-invalid="true"]:focus, select[aria-invalid="true"]:focus {
 .form-status[data-type="success"] {
   display: block;
   background-color: var(--success-bg);
-  border: 1px solid #A7F3D0;
+  border: 1px solid var(--success-border);
   color: var(--success-text);
 }
 .form-status[data-type="notice"] {
   display: block;
-  background-color: #FFFBEB;
-  border: 1px solid #FDE68A;
-  color: #92400E;
+  background-color: var(--notice-bg);
+  border: 1px solid var(--notice-border);
+  color: var(--notice-text);
   font-weight: 400;
 }
 .form-status[data-type="error"] {
   display: block;
   background-color: var(--danger-bg);
-  border: 1px solid #FECACA;
+  border: 1px solid var(--danger-border);
   color: var(--danger-text);
 }
 
 /* Submit button */
 .btn-submit { align-self: flex-start; padding: 14px 32px; }
 
+.draft-notice {
+  background-color: #FEF3E2;
+  border: 1px solid #FDBA74;
+  border-radius: var(--radius);
+  padding: calc(var(--gap) * 2) calc(var(--gap) * 3);
+  font-size: var(--text-sm);
+  color: #7C3A06;
+  margin-bottom: calc(var(--gap) * 6);
+}
+
 /* ── Footer ─────────────────────────────────────────────── */
 .site-footer {
   background-color: var(--bg-deep);
-  border-top: 1px solid #333330;
+  border-top: 1px solid var(--border-deep);
   padding-block: calc(var(--gap) * 10) calc(var(--gap) * 6);
 }
 
@@ -797,13 +816,13 @@ input[aria-invalid="true"]:focus, select[aria-invalid="true"]:focus {
 .footer-brand .wordmark-accent { color: #FDBA74; }
 .footer-tagline {
   font-size: var(--text-sm);
-  color: #D4D0CB;
+  color: var(--ink-inverse-2);
   margin-top: var(--gap);
   max-width: 100%;
 }
 .footer-address {
   font-size: var(--text-xs);
-  color: #888480;
+  color: var(--ink-inverse-3);
   margin-top: calc(var(--gap) * 0.5);
   max-width: 100%;
 }
@@ -814,12 +833,12 @@ input[aria-invalid="true"]:focus, select[aria-invalid="true"]:focus {
   margin-left: auto;
 }
 .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: calc(var(--gap) * 2); }
-.footer-links a { font-size: var(--text-sm); color: #D4D0CB; }
+.footer-links a { font-size: var(--text-sm); color: var(--ink-inverse-2); }
 .footer-links a:hover { color: #FFFFFF; }
 
 .footer-legal p {
   font-size: var(--text-xs);
-  color: #888480;
+  color: var(--ink-inverse-3);
   max-width: 100%;
 }
 
@@ -1140,4 +1159,213 @@ input[aria-invalid="true"]:focus, select[aria-invalid="true"]:focus {
     display: flex;
     clip-path: none;
   }
+}
+
+/* ── Dark Mode ──────────────────────────────────────────────
+   Activated by OS preference, with data-theme hooks for a
+   future manual toggle. See DARKMODE-BRIEF.md §3. */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg:            #121110;
+    --bg-raised:     #1C1A19;
+    --bg-section:    #191717;
+    --bg-deep:       #0B0A0A;
+    --ink:           #F5F3F1;
+    --ink-2:         #B5AFA9;
+    --ink-3:         #908A84;
+    --ink-inverse:   #F5F3F1;
+    --ink-inverse-2: #D4D0CB;
+    --ink-inverse-3: #888480;
+    --accent:        #E05D06;
+    --accent-text:   #FB923C;
+    --accent-dark:   #F2690D;
+    --accent-light:  #3A2410;
+    --border:        #2E2B29;
+    --border-strong: #6E6A66;
+    --border-deep:   #333330;
+    --success:       #059669;
+    --success-bg:    #0E2A1E;
+    --success-text:  #6EE7B7;
+    --success-border:#1A4A34;
+    --danger:        #DC2626;
+    --danger-bg:     #2C1414;
+    --danger-text:   #FCA5A5;
+    --danger-border: #5C2020;
+    --notice-bg:     #2A1E0E;
+    --notice-border: #5C4520;
+    --notice-text:   #FDE68A;
+    --shadow-sm:     none;
+    --shadow-md:     none;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg:            #121110;
+  --bg-raised:     #1C1A19;
+  --bg-section:    #191717;
+  --bg-deep:       #0B0A0A;
+  --ink:           #F5F3F1;
+  --ink-2:         #B5AFA9;
+  --ink-3:         #908A84;
+  --ink-inverse:   #F5F3F1;
+  --ink-inverse-2: #D4D0CB;
+  --ink-inverse-3: #888480;
+  --accent:        #E05D06;
+  --accent-text:   #FB923C;
+  --accent-dark:   #F2690D;
+  --accent-light:  #3A2410;
+  --border:        #2E2B29;
+  --border-strong: #6E6A66;
+  --border-deep:   #333330;
+  --success:       #059669;
+  --success-bg:    #0E2A1E;
+  --success-text:  #6EE7B7;
+  --success-border:#1A4A34;
+  --danger:        #DC2626;
+  --danger-bg:     #2C1414;
+  --danger-text:   #FCA5A5;
+  --danger-border: #5C2020;
+  --notice-bg:     #2A1E0E;
+  --notice-border: #5C4520;
+  --notice-text:   #FDE68A;
+  --shadow-sm:     none;
+  --shadow-md:     none;
+}
+
+/* ── Dark mode component overrides ─────────────────────────── */
+
+/* Browser frame: stronger border around light replica, no shadow */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .browser-frame {
+    border-color: var(--border-strong);
+    box-shadow: none;
+  }
+  :root:not([data-theme="light"]) .frame-cta {
+    box-shadow: none;
+  }
+}
+:root[data-theme="dark"] .browser-frame {
+  border-color: var(--border-strong);
+  box-shadow: none;
+}
+:root[data-theme="dark"] .frame-cta {
+  box-shadow: none;
+}
+
+/* Edition card hover: lighten surface + accent border in dark mode
+   instead of darkening (dark-on-dark gives no feedback). */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .edition-card:hover,
+  :root:not([data-theme="light"]) .edition-card:focus-within {
+    background-color: #2A2725;
+    border-color: var(--accent);
+    box-shadow: none;
+  }
+  :root:not([data-theme="light"]) .edition-card:hover h3,
+  :root:not([data-theme="light"]) .edition-card:focus-within h3 {
+    color: #F5F3F1;
+  }
+  :root:not([data-theme="light"]) .edition-card:hover p,
+  :root:not([data-theme="light"]) .edition-card:focus-within p,
+  :root:not([data-theme="light"]) .edition-card.edition-card--featured:hover p,
+  :root:not([data-theme="light"]) .edition-card.edition-card--featured:focus-within p {
+    color: #B5AFA9;
+  }
+  :root:not([data-theme="light"]) .edition-card:hover .edition-badge,
+  :root:not([data-theme="light"]) .edition-card:focus-within .edition-badge {
+    color: #FB923C;
+  }
+  :root:not([data-theme="light"]) .edition-card:hover .btn,
+  :root:not([data-theme="light"]) .edition-card:focus-within .btn {
+    background-color: var(--accent);
+    color: #141414;
+    border-color: var(--accent);
+  }
+}
+:root[data-theme="dark"] .edition-card:hover,
+:root[data-theme="dark"] .edition-card:focus-within {
+  background-color: #2A2725;
+  border-color: var(--accent);
+  box-shadow: none;
+}
+:root[data-theme="dark"] .edition-card:hover h3,
+:root[data-theme="dark"] .edition-card:focus-within h3 {
+  color: #F5F3F1;
+}
+:root[data-theme="dark"] .edition-card:hover p,
+:root[data-theme="dark"] .edition-card:focus-within p,
+:root[data-theme="dark"] .edition-card.edition-card--featured:hover p,
+:root[data-theme="dark"] .edition-card.edition-card--featured:focus-within p {
+  color: #B5AFA9;
+}
+:root[data-theme="dark"] .edition-card:hover .edition-badge,
+:root[data-theme="dark"] .edition-card:focus-within .edition-badge {
+  color: #FB923C;
+}
+:root[data-theme="dark"] .edition-card:hover .btn,
+:root[data-theme="dark"] .edition-card:focus-within .btn {
+  background-color: var(--accent);
+  color: #141414;
+  border-color: var(--accent);
+}
+
+/* Select arrow: lighter chevron stroke for dark mode */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B5AFA9' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  }
+}
+:root[data-theme="dark"] select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B5AFA9' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* Invalid field focus ring: warmer red on dark surfaces */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) input[aria-invalid="true"]:focus,
+  :root:not([data-theme="light"]) select[aria-invalid="true"]:focus {
+    box-shadow: 0 0 0 3px rgba(252,165,165,0.18);
+  }
+}
+:root[data-theme="dark"] input[aria-invalid="true"]:focus,
+:root[data-theme="dark"] select[aria-invalid="true"]:focus {
+  box-shadow: 0 0 0 3px rgba(252,165,165,0.18);
+}
+
+/* Input border: use --border-strong for visibility on dark surface */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) input[type="text"],
+  :root:not([data-theme="light"]) input[type="email"],
+  :root:not([data-theme="light"]) select,
+  :root:not([data-theme="light"]) textarea {
+    border-color: var(--border-strong);
+  }
+  :root:not([data-theme="light"]) .checkbox-label input[type="checkbox"] {
+    border-color: var(--border-strong);
+  }
+}
+:root[data-theme="dark"] input[type="text"],
+:root[data-theme="dark"] input[type="email"],
+:root[data-theme="dark"] select,
+:root[data-theme="dark"] textarea {
+  border-color: var(--border-strong);
+}
+:root[data-theme="dark"] .checkbox-label input[type="checkbox"] {
+  border-color: var(--border-strong);
+}
+
+/* Draft notice: dark override for the rethemed amber panel */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .draft-notice {
+    background-color: #2A1E0E;
+    border-color: #5C4520;
+    color: #FDE68A;
+  }
+}
+:root[data-theme="dark"] .draft-notice {
+  background-color: #2A1E0E;
+  border-color: #5C4520;
+  color: #FDE68A;
 }
